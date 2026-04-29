@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import boardConfigData from "./board-config.json";
 import type { BoardConfig, BoardItem } from "./types";
 
 function getCellKey(categoryIndex: number, points: number): string {
@@ -6,37 +7,10 @@ function getCellKey(categoryIndex: number, points: number): string {
 }
 
 function App() {
-  const [boardConfig, setBoardConfig] = useState<BoardConfig | null>(null);
+  const boardConfig: BoardConfig = boardConfigData;
   const [opened, setOpened] = useState<Set<string>>(new Set());
-  const [error, setError] = useState<string | null>(null);
-  const configUrl = `${import.meta.env.BASE_URL}board-config.json`;
-
-  useEffect(() => {
-    const loadConfig = async () => {
-      try {
-        const response = await fetch(configUrl, {
-          cache: "no-store",
-        });
-
-        if (!response.ok) {
-          throw new Error(`Could not load config (status ${response.status})`);
-        }
-
-        const data = (await response.json()) as BoardConfig;
-        setBoardConfig(data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Unknown config error");
-      }
-    };
-
-    loadConfig();
-  }, [configUrl]);
 
   const pointRows = useMemo(() => {
-    if (!boardConfig) {
-      return [];
-    }
-
     const points = new Set<number>();
 
     for (const category of boardConfig.categories) {
@@ -50,10 +24,6 @@ function App() {
 
   const itemMap = useMemo(() => {
     const map = new Map<string, BoardItem>();
-
-    if (!boardConfig) {
-      return map;
-    }
 
     boardConfig.categories.forEach((category, categoryIndex) => {
       category.items.forEach((item) => {
@@ -71,22 +41,6 @@ function App() {
       return next;
     });
   };
-
-  if (error) {
-    return (
-      <main className="page">
-        <p className="error">Failed to load board config: {error}</p>
-      </main>
-    );
-  }
-
-  if (!boardConfig) {
-    return (
-      <main className="page">
-        <p className="loading">Loading board...</p>
-      </main>
-    );
-  }
 
   return (
     <main className="page">

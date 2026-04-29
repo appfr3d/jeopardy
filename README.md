@@ -13,7 +13,7 @@ Open the URL shown in terminal (usually `http://localhost:5173`).
 
 ## Edit content
 
-Update `public/board-config.json`.
+Update `src/board-config.json`.
 
 Config format:
 
