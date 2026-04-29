@@ -9,10 +9,7 @@ function App() {
   const [boardConfig, setBoardConfig] = useState<BoardConfig | null>(null);
   const [opened, setOpened] = useState<Set<string>>(new Set());
   const [error, setError] = useState<string | null>(null);
-  const configUrl = new URL(
-    "board-config.json",
-    import.meta.env.BASE_URL,
-  ).toString();
+  const configUrl = `${import.meta.env.BASE_URL}board-config.json`;
 
   useEffect(() => {
     const loadConfig = async () => {

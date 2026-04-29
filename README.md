@@ -47,3 +47,9 @@ This repo is configured to deploy to GitHub Pages at `/jeopardy/`.
 4. Push to `main` to trigger deployment.
 
 The workflow builds the site and publishes the `dist/` output automatically.
+
+Live URL:
+
+`https://appfr3d.github.io/jeopardy/`
+
+If the browser tries to load `/src/main.tsx`, GitHub Pages is still serving the repository root `index.html` instead of the built `dist/` site. That means Pages is still configured to deploy from a branch rather than from GitHub Actions.
