@@ -1,0 +1,44 @@
+{
+  "title": "Arny Twenty ATE",
+  "categories": [
+    {
+      "name": "Arny sin Spotify wrapped\n2024 🔁",
+      "items": [
+        { "points": 100, "answer": "Born To Die\nLana Del Rey" },
+        { "points": 200, "answer": "Want It Bad\nSophie Stray" },
+        { "points": 300, "answer": "Bloody Mary (sped up)\nLady Gaga" },
+        {
+          "points": 400,
+          "answer": "Renaissence - (white lotus)\nCristobal Tapia De Veer"
+        }
+      ]
+    },
+    {
+      "name": "Rosa rollerskaterpop 💅🛼",
+      "items": [
+        { "points": 100, "answer": "Unwritten\nNatasha Bendingfield" },
+        { "points": 200, "answer": "I kissed a girl\nKaty Perry" },
+        { "points": 300, "answer": "Espresso\nSebrina Carpented" },
+        { "points": 400, "answer": "Dance the Night\nDua Lipa" }
+      ]
+    },
+    {
+      "name": "Clubhits 🔊🕺💃",
+      "items": [
+        { "points": 100, "answer": "Satisfaction\nDavid Guetta" },
+        { "points": 200, "answer": "Lay Low\nTiesto" },
+        { "points": 300, "answer": "Call on Me\nEric Prydz" },
+        { "points": 400, "answer": "Pedro\nJaxomy" }
+      ]
+    },
+    {
+      "name": "Afterski ⛷️🍻",
+      "items": [
+        { "points": 100, "answer": "Afterski\nSoppgirobygget" },
+        { "points": 200, "answer": "Freddy Kalas\nPinne for landet" },
+        { "points": 300, "answer": "Country Roads\nHermed House Band" },
+        { "points": 400, "answer": "Hey Baby\nDJ Ötzi" }
+      ]
+    }
+  ]
+}

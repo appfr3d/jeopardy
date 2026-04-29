@@ -1,0 +1,41 @@
+{
+  "title": "Alfred Twenty ATE",
+  "categories": [
+    {
+      "name": "Kaffe & kode ☕💻",
+      "items": [
+        { "points": 100, "answer": "Flat white\n08:17 deploy" },
+        { "points": 200, "answer": "VS Code\n47 faner åpne" },
+        { "points": 300, "answer": "TypeScript\nstrict mode" },
+        { "points": 400, "answer": "Docker\nworks on my machine" }
+      ]
+    },
+    {
+      "name": "Oslo-kveld 🌃",
+      "items": [
+        { "points": 100, "answer": "Mathallen\nto runder til" },
+        { "points": 200, "answer": "Torggata\nser deg der" },
+        { "points": 300, "answer": "Ingensteds\ndet ble sent" },
+        { "points": 400, "answer": "Sukkerbiten\nsolnedgang og jakke" }
+      ]
+    },
+    {
+      "name": "Reisefeber ✈️",
+      "items": [
+        { "points": 100, "answer": "Kabinkoffert\naltfor optimistisk" },
+        { "points": 200, "answer": "Boarding gate\nsprinter igjen" },
+        { "points": 300, "answer": "Google Maps\ndownload offline" },
+        { "points": 400, "answer": "Nattog\nromantisk i teorien" }
+      ]
+    },
+    {
+      "name": "Nerdehjørnet 🎮",
+      "items": [
+        { "points": 100, "answer": "Mario Kart\ningen nåde" },
+        { "points": 200, "answer": "Letterboxd\nfem stjerner ironisk" },
+        { "points": 300, "answer": "Mechanical keyboard\nfor høy profil" },
+        { "points": 400, "answer": "Side project\nferdig neste helg" }
+      ]
+    }
+  ]
+}

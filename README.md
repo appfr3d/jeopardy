@@ -13,7 +13,7 @@ Open the URL shown in terminal (usually `http://localhost:5173`).
 
 ## Edit content
 
-Update `src/board-config.json`.
+Update the board JSON files in `src/boards/`.
 
 Config format:
 
@@ -36,6 +36,13 @@ Config format:
 - `points` values define rows
 - Clicking a tile reveals the `answer` beneath the points overlay
 - Refreshing the page resets the board
+
+Configured board routes:
+
+- `/arny` uses `src/boards/arny.json`
+- `/alfred` uses `src/boards/alfred.json`
+
+Each board also has its own color theme defined in `src/board-registry.ts`.
 
 ## Deploy to GitHub Pages
 

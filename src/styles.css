@@ -5,16 +5,22 @@
   --page-bottom: #fdeccf;
   --shell-bg: rgba(255, 255, 255, 0.7);
   --shell-stroke: rgba(255, 163, 203, 0.5);
+  --shell-shadow: 0 12px 30px rgba(174, 90, 138, 0.14);
   --header-text: #7a3d6f;
   --category-bg: #ffcce3;
   --category-text: #6b3b61;
   --cell-bg: #fffaf3;
   --cell-border: #f7b4d2;
+  --cell-hover-shadow: 0 6px 15px rgba(182, 92, 145, 0.2);
   --overlay-start: #ffa8cf;
   --overlay-end: #ffb696;
   --overlay-text: #ffffff;
   --answer-text: #76415f;
   --empty-cell: rgba(255, 228, 239, 0.55);
+  --focus-ring: #f0649f;
+  --status-text: #7d496c;
+  --orb-1: #ffd7ea;
+  --orb-2: #ffe7ca;
 }
 
 * {
@@ -51,7 +57,7 @@ body {
 .orb-1 {
   width: 28rem;
   height: 28rem;
-  background: radial-gradient(circle, #ffd7ea, #ffc0db00 65%);
+  background: radial-gradient(circle, var(--orb-1), #ffc0db00 65%);
   top: -10rem;
   left: -8rem;
   animation: floatSoft 8s ease-in-out infinite;
@@ -60,7 +66,7 @@ body {
 .orb-2 {
   width: 22rem;
   height: 22rem;
-  background: radial-gradient(circle, #ffe7ca, #ffdca900 65%);
+  background: radial-gradient(circle, var(--orb-2), #ffdca900 65%);
   right: -7rem;
   bottom: -7rem;
   animation: floatSoft 10s ease-in-out infinite reverse;
@@ -75,7 +81,7 @@ body {
   backdrop-filter: blur(6px);
   border-radius: 24px;
   padding: 1rem;
-  box-shadow: 0 12px 30px rgba(174, 90, 138, 0.14);
+  box-shadow: var(--shell-shadow);
   animation: riseIn 550ms ease-out;
 }
 
@@ -129,11 +135,11 @@ body {
 
 .cell:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(182, 92, 145, 0.2);
+  box-shadow: var(--cell-hover-shadow);
 }
 
 .cell:focus-visible {
-  outline: 2px solid #f0649f;
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -172,7 +178,7 @@ body {
 .error {
   text-align: center;
   font-weight: 700;
-  color: #7d496c;
+  color: var(--status-text);
   margin: 3rem 0;
 }
 
