@@ -1,0 +1,41 @@
+{
+  "title": "29 Alfred og Marcus 29",
+  "categories": [
+    {
+      "name": "Skandinavisk stemning 🇳🇴",
+      "items": [
+        { "points": 100, "answer": "Neste sommer\ndeLillos" },
+        { "points": 200, "answer": "Forelska i lærer'n\nThe Kids" },
+        { "points": 300, "answer": "Splitter pine\nDumdum Boys" },
+        { "points": 400, "answer": "Hun er forelska i lærer'n\nKurt Nilsen" }
+      ]
+    },
+    {
+      "name": "2000s singalong 🎤",
+      "items": [
+        { "points": 100, "answer": "Mr. Brightside\nThe Killers" },
+        { "points": 200, "answer": "American Idiot\nGreen Day" },
+        { "points": 300, "answer": "Sex on Fire\nKings of Leon" },
+        { "points": 400, "answer": "Since U Been Gone\nKelly Clarkson" }
+      ]
+    },
+    {
+      "name": "Indie og alt imellom 🌙",
+      "items": [
+        { "points": 100, "answer": "Electric Feel\nMGMT" },
+        { "points": 200, "answer": "Do I Wanna Know?\nArctic Monkeys" },
+        { "points": 300, "answer": "Little Talks\nOf Monsters and Men" },
+        { "points": 400, "answer": "My Number\nFoals" }
+      ]
+    },
+    {
+      "name": "Dansegulv etter midnatt 🪩",
+      "items": [
+        { "points": 100, "answer": "One More Time\nDaft Punk" },
+        { "points": 200, "answer": "Titanium\nDavid Guetta ft. Sia" },
+        { "points": 300, "answer": "Levels\nAvicii" },
+        { "points": 400, "answer": "Rather Be\nClean Bandit ft. Jess Glynne" }
+      ]
+    }
+  ]
+}

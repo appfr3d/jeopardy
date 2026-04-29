@@ -1,4 +1,5 @@
 import alfredBoard from "./boards/alfred.json";
+import alfredOgMarcusBoard from "./boards/alfred-og-marcus.json";
 import arnyBoard from "./boards/arny.json";
 import type { BoardConfig } from "./types";
 
@@ -84,6 +85,32 @@ const routedBoards: Record<string, RoutedBoard> = {
       orb2: "#c7f2ec",
     },
   },
+  "alfred-og-marcus": {
+    path: "/alfred-og-marcus",
+    config: alfredOgMarcusBoard,
+    theme: {
+      pageTop: "#fff6e8",
+      pageBottom: "#ffd9b8",
+      shellBg: "rgba(255, 251, 244, 0.8)",
+      shellStroke: "rgba(224, 145, 79, 0.42)",
+      shellShadow: "0 14px 34px rgba(158, 95, 34, 0.18)",
+      headerText: "#78421f",
+      categoryBg: "#ffd29e",
+      categoryText: "#643311",
+      cellBg: "#fffdf9",
+      cellBorder: "#f1b26f",
+      cellHoverShadow: "0 8px 18px rgba(188, 113, 47, 0.18)",
+      overlayStart: "#ff9f5a",
+      overlayEnd: "#ffcf6d",
+      overlayText: "#fffdf8",
+      answerText: "#6d3a17",
+      emptyCell: "rgba(255, 225, 192, 0.52)",
+      focusRing: "#e97822",
+      statusText: "#7a4a27",
+      orb1: "#ffd7ab",
+      orb2: "#ffe8bf",
+    },
+  },
 };
 
 const defaultBoardKey = "arny";
@@ -110,7 +137,8 @@ function toRelativePath(pathname: string, baseUrl: string): string {
 
 export function resolveBoard(pathname: string, baseUrl: string): RoutedBoard {
   const relativePath = stripTrailingSlash(toRelativePath(pathname, baseUrl));
-  const boardKey = relativePath.split("/").filter(Boolean)[0] ?? defaultBoardKey;
+  const boardKey =
+    relativePath.split("/").filter(Boolean)[0] ?? defaultBoardKey;
 
   return routedBoards[boardKey] ?? routedBoards[defaultBoardKey];
 }

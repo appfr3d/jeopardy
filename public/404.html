@@ -6,7 +6,9 @@
     <title>Jeopardy Board</title>
     <script>
       const pathSegmentsToKeep = 1;
-      const pathnameSegments = window.location.pathname.split("/").filter(Boolean);
+      const pathnameSegments = window.location.pathname
+        .split("/")
+        .filter(Boolean);
       const baseSegments = pathnameSegments.slice(0, pathSegmentsToKeep);
       const boardSegments = pathnameSegments.slice(pathSegmentsToKeep);
       const basePath = `/${baseSegments.join("/")}`;
