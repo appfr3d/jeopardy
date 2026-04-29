@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap");
+
+:root {
+  --page-top: #fef1f8;
+  --page-bottom: #fdeccf;
+  --shell-bg: rgba(255, 255, 255, 0.7);
+  --shell-stroke: rgba(255, 163, 203, 0.5);
+  --header-text: #7a3d6f;
+  --category-bg: #ffcce3;
+  --category-text: #6b3b61;
+  --cell-bg: #fffaf3;
+  --cell-border: #f7b4d2;
+  --overlay-start: #ffa8cf;
+  --overlay-end: #ffb696;
+  --overlay-text: #ffffff;
+  --answer-text: #76415f;
+  --empty-cell: rgba(255, 228, 239, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 2.2rem 1rem;
+  background: linear-gradient(180deg, var(--page-top), var(--page-bottom));
+  overflow: hidden;
+}
+
+.background-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(3px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.orb-1 {
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, #ffd7ea, #ffc0db00 65%);
+  top: -10rem;
+  left: -8rem;
+  animation: floatSoft 8s ease-in-out infinite;
+}
+
+.orb-2 {
+  width: 22rem;
+  height: 22rem;
+  background: radial-gradient(circle, #ffe7ca, #ffdca900 65%);
+  right: -7rem;
+  bottom: -7rem;
+  animation: floatSoft 10s ease-in-out infinite reverse;
+}
+
+.board-shell {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-stroke);
+  backdrop-filter: blur(6px);
+  border-radius: 24px;
+  padding: 1rem;
+  box-shadow: 0 12px 30px rgba(174, 90, 138, 0.14);
+  animation: riseIn 550ms ease-out;
+}
+
+.board-header {
+  text-align: center;
+  margin-bottom: 0.9rem;
+}
+
+.board-header h1 {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  letter-spacing: 0.04em;
+  color: var(--header-text);
+}
+
+.board-grid {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.category-title {
+  padding: 0.8rem 0.55rem;
+  border-radius: 14px;
+  background: var(--category-bg);
+  color: var(--category-text);
+  text-align: center;
+  font-weight: 800;
+  min-height: 4.2rem;
+  white-space: pre-line;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.cell {
+  position: relative;
+  border: 1px solid var(--cell-border);
+  border-radius: 14px;
+  background: var(--cell-bg);
+  min-height: 7rem;
+  padding: 1rem;
+  color: var(--answer-text);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 120ms ease,
+    box-shadow 180ms ease;
+}
+
+.cell:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(182, 92, 145, 0.2);
+}
+
+.cell:focus-visible {
+  outline: 2px solid #f0649f;
+  outline-offset: 2px;
+}
+
+.cell.missing {
+  background: var(--empty-cell);
+  cursor: default;
+  pointer-events: none;
+}
+
+.answer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: pre-line;
+  font-size: clamp(0.86rem, 2.2vw, 1.06rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--overlay-text);
+  background: linear-gradient(135deg, var(--overlay-start), var(--overlay-end));
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-weight: 700;
+  color: #7d496c;
+  margin: 3rem 0;
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding: 1rem 0.55rem;
+  }
+
+  .board-shell {
+    border-radius: 16px;
+    padding: 0.7rem;
+  }
+
+  .category-title {
+    min-height: 3.5rem;
+    font-size: 0.82rem;
+    padding: 0.45rem;
+  }
+
+  .cell {
+    min-height: 5.3rem;
+    padding: 0.6rem;
+  }
+
+  .answer {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(14px);
+  }
+}
