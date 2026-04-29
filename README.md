@@ -36,3 +36,14 @@ Config format:
 - `points` values define rows
 - Clicking a tile reveals the `answer` beneath the points overlay
 - Refreshing the page resets the board
+
+## Deploy to GitHub Pages
+
+This repo is configured to deploy to GitHub Pages at `/jeopardy/`.
+
+1. Push this repository to GitHub.
+2. In GitHub, open `Settings > Pages`.
+3. Set `Source` to `GitHub Actions`.
+4. Push to `main` to trigger deployment.
+
+The workflow builds the site and publishes the `dist/` output automatically.

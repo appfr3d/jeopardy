@@ -9,11 +9,15 @@ function App() {
   const [boardConfig, setBoardConfig] = useState<BoardConfig | null>(null);
   const [opened, setOpened] = useState<Set<string>>(new Set());
   const [error, setError] = useState<string | null>(null);
+  const configUrl = new URL(
+    "board-config.json",
+    import.meta.env.BASE_URL,
+  ).toString();
 
   useEffect(() => {
     const loadConfig = async () => {
       try {
-        const response = await fetch("/board-config.json", {
+        const response = await fetch(configUrl, {
           cache: "no-store",
         });
 
@@ -29,7 +33,7 @@ function App() {
     };
 
     loadConfig();
-  }, []);
+  }, [configUrl]);
 
   const pointRows = useMemo(() => {
     if (!boardConfig) {
