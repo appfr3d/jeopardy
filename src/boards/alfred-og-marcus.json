@@ -2,39 +2,49 @@
   "title": "29 Alfred og Marcus 29",
   "categories": [
     {
-      "name": "Skandinavisk stemning 🇳🇴",
+      "name": "Alfred's spotify wrapped 2025 🔁",
       "items": [
-        { "points": 100, "answer": "Neste sommer\ndeLillos" },
-        { "points": 200, "answer": "Forelska i lærer'n\nThe Kids" },
-        { "points": 300, "answer": "Splitter pine\nDumdum Boys" },
-        { "points": 400, "answer": "Hun er forelska i lærer'n\nKurt Nilsen" }
+        { "points": 100, "answer": "Waste a moment\nKings of Leon" },
+        { "points": 200, "answer": "Hollywood\nSkinny E" },
+        { "points": 300, "answer": "Heute ist mein tag\nHonningbarna" },
+        { "points": 400, "answer": "Ice Ice Baby\nVanilla Ice" },
+        { "points": 500, "answer": "Evig Penger\nAktiv Dödshjelp" }
       ]
     },
     {
-      "name": "2000s singalong 🎤",
+      "name": "2016 hits 🎉",
       "items": [
-        { "points": 100, "answer": "Mr. Brightside\nThe Killers" },
-        { "points": 200, "answer": "American Idiot\nGreen Day" },
-        { "points": 300, "answer": "Sex on Fire\nKings of Leon" },
-        { "points": 400, "answer": "Since U Been Gone\nKelly Clarkson" }
+        { "points": 100, "answer": "One Dance\nDrake" },
+        { "points": 200, "answer": "Work\nRihanna ft. Drake" },
+        {
+          "points": 300,
+          "answer": "Ice Ice Baby\nVanilla Ice"
+        },
+        { "points": 400, "answer": "Panda\nDesiigner" },
+        {
+          "points": 500,
+          "answer": "Don't Let Me Down\nThe Chainsmokers ft. Daya"
+        }
       ]
     },
     {
-      "name": "Indie og alt imellom 🌙",
+      "name": "Geografi 🌍",
       "items": [
-        { "points": 100, "answer": "Electric Feel\nMGMT" },
-        { "points": 200, "answer": "Do I Wanna Know?\nArctic Monkeys" },
-        { "points": 300, "answer": "Little Talks\nOf Monsters and Men" },
-        { "points": 400, "answer": "My Number\nFoals" }
+        { "points": 100, "answer": "Ni**as In Paris\nJAŸ-Z, Kanye West" },
+        { "points": 200, "answer": "The Oslo Bowl\nBigbang" },
+        { "points": 300, "answer": "Miami\nWill Smith" },
+        { "points": 400, "answer": "bad bitch i RVK\nClubDub" },
+        { "points": 500, "answer": "Ice Ice Baby\nVanilla Ice" }
       ]
     },
     {
-      "name": "Dansegulv etter midnatt 🪩",
+      "name": "Marcus' spotify wrapped 2025 🔁",
       "items": [
-        { "points": 100, "answer": "One More Time\nDaft Punk" },
-        { "points": 200, "answer": "Titanium\nDavid Guetta ft. Sia" },
-        { "points": 300, "answer": "Levels\nAvicii" },
-        { "points": 400, "answer": "Rather Be\nClean Bandit ft. Jess Glynne" }
+        { "points": 100, "answer": "Få det på\nAstrid S" },
+        { "points": 200, "answer": "Bad Dreams\nTeddy Swims" },
+        { "points": 300, "answer": "Cherry Blossom\nEmpire Of The Sun" },
+        { "points": 400, "answer": "Ice Ice Baby\nVanilla Ice" },
+        { "points": 500, "answer": "Running in The Night\nFM-84" }
       ]
     }
   ]
